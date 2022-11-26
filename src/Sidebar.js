@@ -1,19 +1,19 @@
 import { Link, useNavigate } from "react-router-dom";
 
 export default function Sidebar() {
-    const navigate=useNavigate();
-    let dologout=()=>{
+    const navigate = useNavigate();
+    let dologout = () => {
         localStorage.removeItem("react_app_token");
         localStorage.removeItem("profile");
         navigate("/");
-      }
+    }
     return (
-        <ul class="navbar-nav bg-gradient-info sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
             <a className="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
                 <div className="sidebar-brand-icon rotate-n-15">
-                    
+
                     <i class="fas fa-sack-dollar"></i>
-                    
+
                 </div>
                 <div className="sidebar-brand-text mx-3">Money Manager</div>
             </a>
@@ -42,9 +42,9 @@ export default function Sidebar() {
             <hr className="sidebar-divider" />
 
 
-<div className="sidebar-heading">
-    Creation
-</div>
+            <div className="sidebar-heading">
+                Creation
+            </div>
             <li className="nav-item">
                 <Link className="nav-link" to="/portal/addincome">
                     <i className="fas fa-fw fa-user-plus"></i>
@@ -56,23 +56,23 @@ export default function Sidebar() {
                     <button className="btn btn-warning">Add Expense</button></Link>
             </li>
 
-            
+
 
 
             <hr className="sidebar-divider" />
 
             <li className="nav-item">
-                
+
                 <a className="nav-link mt-0">
-                <i class="fas fa-sign-out-alt"></i>
+                    <i class="fas fa-sign-out-alt"></i>
                     <button className="btn btn-danger" onClick={dologout}>Logout</button>
                 </a>
             </li>
-            
 
 
-            
-            
+
+
+
 
         </ul>
     )

@@ -3,10 +3,8 @@ import Sidebar from './Sidebar';
 import Topbar from './Topbar';
 
 import {
-    BrowserRouter,
-    Routes,
-    Route,
-    Outlet,
+  
+    Outlet
 } from "react-router-dom";
 function Portal() {
 
